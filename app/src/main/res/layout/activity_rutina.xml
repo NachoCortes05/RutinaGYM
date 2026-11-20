@@ -3,18 +3,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:fitsSystemWindows="true"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="24dp"
+    android:paddingBottom="16dp">
 
     <TextView
         android:id="@+id/tvTituloRutina"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Mi Rutina de Entrenamiento"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="12dp" />
 
-    <!-- El RecyclerView donde se pintarán todas las filas -->
+    <EditText
+        android:id="@+id/etBuscarCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Buscar por categoría o nombre (ej. Pecho)"
+        android:inputType="text"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="8dp"
+        android:layout_marginBottom="12dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvRutina"
         android:layout_width="match_parent"
@@ -25,7 +46,7 @@
         android:id="@+id/btnVolverFormulario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Añadir más ejercicios" />
+        android:text="AÑADIR MÁS EJERCICIOS"
+        android:layout_marginTop="8dp" />
 
 </LinearLayout>

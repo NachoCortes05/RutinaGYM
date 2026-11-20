@@ -1,53 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:padding="24dp">
+    android:fitsSystemWindows="true">
 
-    <TextView
-        android:id="@+id/tvTitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Registro de Ejercicios"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="24dp" />
-
-    <EditText
-        android:id="@+id/etNombre"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre del ejercicio (ej. Flexiones)"
-        android:layout_marginBottom="12dp" />
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="16dp">
 
-    <EditText
-        android:id="@+id/etRepeticiones"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Número de repeticiones o series"
-        android:inputType="number"
-        android:layout_marginBottom="12dp" />
+        <TextView
+            android:id="@+id/tvTituloMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuevo Ejercicio"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
 
-    <EditText
-        android:id="@+id/etTipo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Tipo (Fuerza, Cardio...)"
-        android:layout_marginBottom="20dp" />
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del ejercicio (ej. Press banca)"
+            android:inputType="textCapSentences"
+            android:layout_marginBottom="10dp" />
 
-    <Button
-        android:id="@+id/btnGuardar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Guardar Ejercicio"
-        android:layout_marginBottom="8dp" />
+        <EditText
+            android:id="@+id/etRepeticiones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Repeticiones (ej. 12)"
+            android:inputType="number"
+            android:layout_marginBottom="10dp" />
 
-    <Button
-        android:id="@+id/btnVerLista"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ver Rutina Completa" />
+        <EditText
+            android:id="@+id/etTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Categoría (ej. Pecho, Espalda, Piernas)"
+            android:inputType="textCapSentences"
+            android:layout_marginBottom="16dp" />
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:id="@+id/btnCamara"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="HACER FOTO"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/btnGaleria"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="GALERÍA"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivFotoEjercicio"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:background="#EEEEEE"
+            android:contentDescription="Vista previa de la foto"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AÑADIR UBICACIÓN GPS"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/tvUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ubicación: sin registrar"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GUARDAR EJERCICIO"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnVerLista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VER MI RUTINA" />
+
+    </LinearLayout>
+</ScrollView>

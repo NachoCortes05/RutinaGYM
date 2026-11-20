@@ -1,52 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:padding="24dp">
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:fitsSystemWindows="true"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="24dp"
+    android:paddingBottom="16dp">
 
-    <!-- Requisito obligatorio: ImageView con sentido real -->
     <ImageView
         android:id="@+id/ivTipoEjercicio"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginBottom="24dp"
-        android:src="@android:drawable/ic_menu_agenda" />
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gimnasio"
+        android:contentDescription="Imagen del ejercicio"
+        android:layout_marginBottom="20dp" />
 
-    <!-- Nombre del ejercicio que recibimos por Intent -->
     <TextView
         android:id="@+id/tvDetalleNombre"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nombre del Ejercicio"
+        android:text="Nombre del ejercicio"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:gravity="center"
         android:layout_marginBottom="12dp" />
 
-    <!-- Repeticiones que recibimos por Intent -->
     <TextView
         android:id="@+id/tvDetalleRepeticiones"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Repeticiones: 0"
+        android:text="Objetivo: 12 repeticiones"
         android:textSize="18sp"
+        android:gravity="center"
         android:layout_marginBottom="8dp" />
 
-    <!-- Tipo de ejercicio -->
     <TextView
         android:id="@+id/tvDetalleTipo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Categoría: -"
-        android:textSize="16sp"
-        android:layout_marginBottom="32dp" />
+        android:text="Categoría: Pecho"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
 
-    <!-- Botón para cerrar y volver atrás con finish() -->
+    <TextView
+        android:id="@+id/tvDetalleUbicacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gimnasio: 36.7213, -4.4214"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginBottom="28dp" />
+
     <Button
         android:id="@+id/btnVolver"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Volver" />
+        android:text="VOLVER A LA RUTINA" />
 
 </LinearLayout>
